@@ -7,7 +7,7 @@ if [ -z "$flavor" ]; then
 	echo " e.g.: $0 alpine"
 	echo " e.g.: $0 alpine ash"
 	echo "Flavors: "
-	ls -1 $WD/../flavors
+	ls -1 $WD/../docker
 	exit 1
 fi
 
@@ -16,4 +16,4 @@ shift
 IMAGE=docker-$flavor-diaspora
 NAME=$IMAGE
 
-docker build -t $IMAGE $WD/../flavors/$flavor
+docker build -t $IMAGE $WD/../docker/$flavor
