@@ -5,7 +5,8 @@ Diaspora docker image
 ```bash
 	bin/build.sh alpine
 ```
-## Configuration
+
+## Dependencies
 ### Database
 ```bash
 	docker run --name postgres \
@@ -15,13 +16,23 @@ Diaspora docker image
 		-e PGDATA=/var/lib/postgresql/data/pgdata \
 		-d postgres:alpine3.16
 ```
+
 ### Redis
 ```bash
 	docker run --name redis \
 		-v /config/redis.conf:/usr/local/etc/redis/redis.conf \
 		-d redis:alpine3.16
 ```
+
+## Configuration
+
 ## Running
+### Container
+```bash
+	bin/run.sh alpine
+```
+
+### Eco-system
 ```bash
 	bin/run.sh alpine
 ```
